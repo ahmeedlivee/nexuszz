@@ -38,4 +38,4 @@ client.on("error", (e) => console.error(e));
 client.on("warn", (e) => console.warn(e));
 client.on("debug", (e) => console.info(e));
 
-client.login(prcoess.env.token)
+client.login(prcoess.env.BOT_TOKEN)
