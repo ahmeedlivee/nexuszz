@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
     message.delete(message)
 
     if (talkedRecently.has(message.author.id)) {
-        message.reply(`You need to wait ${config.cooldown} minutes to use this command again!`).then(m => {
+        message.reply(`You need to wait ${package.cooldown} minutes to use this command again!`).then(m => {
             setTimeout(() => {
                 m.delete(m)
             }, 5000); //5 seconds
@@ -36,7 +36,7 @@ exports.run = (client, message, args) => {
             talkedRecently.add(message.author.id);
             setTimeout(() => {
                 talkedRecently.delete(message.author.id);
-            }, config.cooldown * 60 *1000);
+            }, package.cooldown * 60 *1000);
 
         })
     }
